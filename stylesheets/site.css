@@ -1,0 +1,91 @@
+/* --- COLORS ---
+#EC4B1B - orange
+#F9A132 - yellowish-orange
+#38383A - slate
+#F2F2F2 - light grey
+*/
+
+
+/* --- BASIC ELEMENTS --- */
+
+body {
+  background-color: #EC4B1B;
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #F9A132;
+}
+
+
+/* --- UTILITY CLASSES --- */
+
+.st-width {
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+/* --- LAYOUT --- */
+
+header {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+header h1 {
+  float: left;
+  margin-top: 10px;
+  height: 40px;
+  width: 100px;
+  background: url(../images/logo.svg) no-repeat bottom left;
+  background-size: auto 200px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+header nav {
+  float: right;
+  margin-top: 30px;
+}
+header nav a {
+  font-size: 18px;
+  color: #EC4B1B;
+  display: inline-block;
+  margin-left: 1em;
+}
+
+section {
+  background-color: #38383A;
+  padding-top: 3em;
+}
+section .st-width {
+  padding-top: 7em;
+  background: url(../images/seperator_slate.png) no-repeat center top;
+}
+section#about .st-width {
+  padding-top: 0;
+  background-image: none;
+}
+section#sponsors .st-width {
+  background-image: url(../images/seperator_light_grey.png);
+}
+
+section#about {
+  margin-top: 60px;
+}
+
+section#sponsors {
+  background-color: #ACAEB0;
+}
+
+#map {
+  height: 400px;
+}
+
+footer {
+}
