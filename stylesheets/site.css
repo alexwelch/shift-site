@@ -7,9 +7,12 @@
 
 
 /* --- BASIC ELEMENTS --- */
+html,
+body {
+  height: 100%;
+}
 
 body {
-  background-color: #EC4B1B;
   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
   font-size: 22px;
 }
@@ -33,6 +36,7 @@ a {
 header {
   position: fixed;
   top: 0;
+  z-index: 999;
   height: 60px;
   width: 100%;
   background-color: #F2F2F2;
@@ -63,7 +67,12 @@ header nav a {
 section {
   background-color: #38383A;
   padding-top: 3em;
+  position: relative;
 }
+section#about { z-index: 91; }
+section#info { z-index: 92; }
+section#register { z-index: 93; }
+footer { position: relative; z-index: 95 }
 section .st-width {
   padding-top: 7em;
   background: url(../images/seperator_slate.png) no-repeat center top;
@@ -84,9 +93,21 @@ section#sponsors {
   background-color: #ACAEB0;
 }
 
+section#location {
+  height: 100%;
+  background: none;
+}
+.map-wrap {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 #map {
-  height: 400px;
+  height: 100%;
 }
 
 footer {
+  background-color: #EC4B1B;
 }
