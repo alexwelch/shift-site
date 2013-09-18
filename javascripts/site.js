@@ -1,5 +1,14 @@
 (function($) {
 
+  $.fn.clickToScroll = function() {
+    $(this).click(function(e) {
+      e.preventDefault();
+      var $targetContainer = $($(e.currentTarget).attr('href'));
+
+      $('html, body').animate({scrollTop: $targetContainer.offset().top - 20});
+    });
+  }
+
   function loadAnalytics() {
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-44125527-1']);
@@ -14,5 +23,6 @@
 
   $(function() {
     loadAnalytics();
+    $('header a').clickToScroll();
   });
 })(jQuery);
