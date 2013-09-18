@@ -1,12 +1,40 @@
-var map;
-function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(-34.397, 150.644),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map(document.getElementById('map'),
-      mapOptions);
-}
+(function() {
+  var ShiftMap = function() {
+    var base = this;
 
-google.maps.event.addDomListener(window, 'load', initialize);
+    this.map = null;
+
+    base.location = new google.maps.LatLng(39.772131, -104.98194799999999);
+
+    base.mapOptions = {
+      zoom: 14,
+      center: base.location,
+      scrollwheel: false,
+      streetViewControl: false,
+      mapTypeControl: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    base.init = function() {
+      google.maps.event.addDomListener(window, 'load', base.load);
+    };
+
+    base.load = function() {
+      base.map = new google.maps.Map(document.getElementById('map'), base.mapOptions);
+
+      base.setMarker();
+    };
+
+    base.setMarker = function() {
+      var marker = new google.maps.Marker({
+        position: base.location,
+        map: base.map,
+        title: 'ReFuel'
+      });
+    };
+
+    base.init();
+  }
+
+  new ShiftMap;
+})();
