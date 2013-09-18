@@ -54,6 +54,13 @@
         <a class="button" href="/todo">R.S.V.P</a>
         <span class="time">5PM - 10PM</span>
         <p>Join us for a night of beer, food, bikes and art.</p>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        <form id="registration_form" method="get" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzqg-FtqXd0sLbk6RhuIUqXtGmMCdmfe02wxag4hnYdBteVDZjH/exec">
+          <input name="name" type="text" placeholder="name"/>
+          <input name="email" type="text" placeholder="email"/>
+          <input name="count" type="number" placeholder="# of people"/>
+          <input type="submit" value="Register" />
+        </form>
       </div>
     </section>
     <section id="location">
