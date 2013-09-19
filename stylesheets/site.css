@@ -79,6 +79,20 @@ header nav a {
   margin-left: 15px;
 }
 
+.splash header {
+  height: 100%;
+  position: relative;
+}
+.splash header h1 {
+  width: 500px;
+  height: 100%;
+}
+.splash header h1 svg {
+  width: 600px;
+  height: 90%;
+  top: 0;
+}
+
 section {
   background-color: #38383A;
   padding-top: 60px;
@@ -227,3 +241,4 @@ footer .social-links li a {
   overflow: hidden;
   text-indent: 100%;
 }
+
