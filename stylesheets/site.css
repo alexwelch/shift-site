@@ -150,6 +150,27 @@ section#location {
 #map {
   height: 100%;
 }
+.map-wrap address {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background: #fff;
+  padding:20px;
+  color: #38383A;
+  opacity: 0.9;
+}
+.map-wrap address span {
+  display: block;
+}
+.map-wrap address span:nth-child(1) {
+  font-size: 45px;
+}
+.map-wrap address span:nth-child(2) {
+  font-size: 20px;
+}
+.map-wrap address span:nth-child(3) {
+  font-size: 34px;
+}
 
 footer {
   background-color: #EC4B1B;
