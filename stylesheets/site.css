@@ -15,6 +15,7 @@ body {
 body {
   font-family: 'Rokkitt', serif;
   font-size: 22px;
+  color: #EC4B1B;
 }
 
 a {
@@ -22,11 +23,25 @@ a {
   color: #F9A132;
 }
 
+p {
+  padding-bottom: 1em;
+  line-height: 1.3;
+}
+
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 0.5em;
+}
+
+h4 {
+  font-weight: bold;
+}
+
 
 /* --- UTILITY CLASSES --- */
 
 .st-width {
-  width: 960px;
+  width: 940px;
   margin: 0 auto;
 }
 
@@ -61,28 +76,36 @@ header nav a {
   font-size: 18px;
   color: #EC4B1B;
   display: inline-block;
-  margin-left: 1em;
+  margin-left: 15px;
 }
 
 section {
   background-color: #38383A;
-  padding-top: 3em;
+  padding-top: 60px;
   position: relative;
+  font-size: 32px;
 }
+
 section#about { z-index: 91; }
 section#info { z-index: 92; }
 section#register { z-index: 93; }
 footer { position: relative; z-index: 95 }
+
 section .st-width {
-  padding-top: 7em;
+  padding-top: 150px;
   background: url(../images/seperator_slate.png) no-repeat center top;
 }
 section#about .st-width {
   padding-top: 0;
   background-image: none;
+  width: 560px;
+  text-align: justify;
+  text-transform: uppercase;
 }
 section#sponsors .st-width {
   background-image: url(../images/seperator_light_grey.png);
+  overflow: auto;
+  padding-bottom: 70px;
 }
 
 section#about {
@@ -90,7 +113,27 @@ section#about {
 }
 
 section#sponsors {
+  color: #636262;
   background-color: #ACAEB0;
+}
+#sponsors ul li {
+  float: left;
+  width: 140px;
+  margin-right: 20px;
+  background-color: #FFF;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#sponsors ul li.last {
+  margin-right: 0;
+}
+#sponsors ul li p,
+#sponsors ul li h4 {
+  margin: 10px;
+}
+
+section#register {
+
 }
 
 section#location {
@@ -110,4 +153,29 @@ section#location {
 
 footer {
   background-color: #EC4B1B;
+  padding: 35px 0;
+}
+footer a {
+  display: block;
+  text-align: center;
+  clear: both;
+  color: #FFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+}
+footer .social-links {
+  margin: 0 auto 15px;
+  width: 240px;
+  overflow: auto;
+}
+footer .social-links li {
+  float: left;
+  margin: 0 10px;
+}
+footer .social-links li a {
+  width: 60px;
+  height: 60px;
+  background: url(../images/social_icons.png) no-repeat 0 0;
+  overflow: hidden;
+  text-indent: 100%;
 }
