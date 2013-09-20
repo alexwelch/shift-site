@@ -16,6 +16,29 @@
     });
   }
 
+  $.fn.instaGrammer = function() {
+    $(this).instagram({
+      clientId: '0004dbf5e3114fdda0dab4d51426bc3d',
+      count: 6
+    });
+
+    $('#instagram_feed').on('didLoadInstagram', function(e, response) {
+      var $html = $("<ul></ul>");
+      $.each(response.data, function(i, item) {
+        var titleText = '';
+        if (item.caption) {
+          titleText = item.caption.text
+        }
+        $html.append("<li>" +
+                     "<a href='" + item.link + "' title='" + titleText + "'>" + 
+                     "<img src='" + item.images.low_resolution.url + "' />" +
+                     "</a>" +
+                     "</li>");
+      });
+      $(this).html($html);
+    });
+  }
+
   function loadAnalytics() {
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-44125527-1']);
@@ -32,5 +55,10 @@
     loadAnalytics();
     $('header a').clickToScroll();
     $('form#registration_form').registrationForm();
+    $('#instagram_feed').instaGrammer();
   });
 })(jQuery);
+
+// use this to get a access token when the site is up
+// https://api.instagram.com/oauth/authorize/?client_id=0004dbf5e3114fdda0dab4d51426bc3d&redirect_uri=http://localhost/primal_shift&response_type=code
+

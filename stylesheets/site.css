@@ -112,6 +112,33 @@ section#about {
   margin-top: 60px;
 }
 
+section#info {
+  overflow: auto;
+}
+section#info ul li {
+  float: left;
+  width: 300px;
+  height: 300px;
+  margin: 0 20px 20px 0;
+  overflow: hidden;
+}
+section#info ul li:nth-child(3n) {
+  margin-right: 0;
+}
+section#info ul li img {
+  display: block;
+  width: 300px;
+}
+section#info ul li a img {
+  transition: width 0.2s,
+              margin 0.2s;
+}
+section#info ul li a:hover img {
+  width: 306px;
+  margin-top: -3px;
+  margin-left: -3px;
+}
+
 section#sponsors {
   color: #636262;
   background-color: #ACAEB0;
