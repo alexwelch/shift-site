@@ -87,7 +87,7 @@ section {
 }
 
 section#about { z-index: 91; }
-section#info { z-index: 92; }
+section#photos { z-index: 92; }
 section#register { z-index: 93; }
 footer { position: relative; z-index: 95 }
 
@@ -112,28 +112,28 @@ section#about {
   margin-top: 60px;
 }
 
-section#info {
+section#photos {
   overflow: auto;
 }
-section#info ul li {
+section#photos ul li {
   float: left;
   width: 300px;
   height: 300px;
   margin: 0 20px 20px 0;
   overflow: hidden;
 }
-section#info ul li:nth-child(3n) {
+section#photos ul li:nth-child(3n) {
   margin-right: 0;
 }
-section#info ul li img {
+section#photos ul li img {
   display: block;
   width: 300px;
 }
-section#info ul li a img {
+section#photos ul li a img {
   transition: width 0.2s,
               margin 0.2s;
 }
-section#info ul li a:hover img {
+section#photos ul li a:hover img {
   width: 306px;
   margin-top: -3px;
   margin-left: -3px;
