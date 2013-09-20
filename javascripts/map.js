@@ -12,6 +12,12 @@
       scrollwheel: false,
       streetViewControl: false,
       mapTypeControl: false,
+      panControl: false,
+      zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.LARGE,
+        position: google.maps.ControlPosition.LEFT_BOTTOM
+      },
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
