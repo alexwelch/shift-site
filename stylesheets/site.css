@@ -78,7 +78,8 @@ header h1 {
   /* transition: -webkit-transform 0.3s; */
 }
 header h1 svg {
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 header nav {
   position: absolute;
