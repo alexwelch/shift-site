@@ -5,7 +5,7 @@
       e.preventDefault();
       var $targetContainer = $($(e.currentTarget).attr('href'));
 
-      $('html, body').animate({scrollTop: $targetContainer.offset().top - 20});
+      $('html, body').animate({scrollTop: $targetContainer.offset().top - 110});
     });
   }
 
@@ -56,6 +56,8 @@
     $('header a').clickToScroll();
     $('form#registration_form').registrationForm();
     $('#instagram_feed').instaGrammer();
+    $('header h1').height($(window).height()); // set a fixed height pre-animation
+    $(window).coordinateScrolling();
   });
 })(jQuery);
 
