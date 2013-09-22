@@ -1,10 +1,4 @@
 (function($) {
-  $.fn.registrationForm = function() {
-    $form = $(this);
-    $form.submit(function(e) {
-      console.log('do some validations');
-    });
-  }
 
   $.fn.instaGrammer = function() {
     $(this).instagram({

@@ -45,7 +45,6 @@ h4 {
   margin: 0 auto;
 }
 
-
 /* --- LAYOUT --- */
 
 header {
@@ -181,6 +180,11 @@ section#sponsors {
 
 section#register {
 
+}
+
+input.invalid,
+select.invalid {
+  border: red 2px solid;
 }
 
 section#location {
