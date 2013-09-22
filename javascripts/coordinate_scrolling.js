@@ -5,6 +5,7 @@
     base.el = el;
     base.lastScrollTop = 0;
     base.splashIsShowing = true;
+    base.navigating = false;
 
     base.init = function(){
       base.options = $.extend({},$.ScrollingCoordinator.defaultOptions, options);
@@ -13,21 +14,37 @@
 
     base.bindEvents = function() {
       $(window).on('scroll', base.toggleSplashScreen);
+      base.$el.find('header a').on('click', base.handleNavClick);
     };
 
     base.toggleSplashScreen = function(e) {
       var scrollTop = $(window).scrollTop()
 
       if (base.isScrollingDown(scrollTop)) {
-        if (base.splashIsShowing && (scrollTop > base.options.scrollFromTopThreshold)) {
+        if (!base.navigating && base.splashIsShowing && (scrollTop > base.options.scrollFromTopThreshold)) {
           base.hideSplash();
-          $('nav a:first-child').click();
+          base.scrollTo($('#about'));
         }
       } else {
         if (scrollTop <= 0) {
           base.showSplash();
         }
       }
+    };
+
+    base.handleNavClick = function(e) {
+      e.preventDefault();
+      base.navigating = true;
+      var $targetContainer = $($(e.currentTarget).attr('href'));
+
+      base.hideSplash();
+      base.scrollTo($targetContainer, function() {
+        base.navigating = false;
+      });
+    };
+
+    base.scrollTo = function($targetContainer, hollaBack) {
+      $('html, body').animate({scrollTop: $targetContainer.offset().top - 110}, 300, hollaBack);
     };
 
     base.hideSplash = function() {

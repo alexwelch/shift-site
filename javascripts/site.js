@@ -1,14 +1,4 @@
 (function($) {
-
-  $.fn.clickToScroll = function() {
-    $(this).click(function(e) {
-      e.preventDefault();
-      var $targetContainer = $($(e.currentTarget).attr('href'));
-
-      $('html, body').animate({scrollTop: $targetContainer.offset().top - 110});
-    });
-  }
-
   $.fn.registrationForm = function() {
     $form = $(this);
     $form.submit(function(e) {
@@ -53,11 +43,10 @@
 
   $(function() {
     loadAnalytics();
-    $('header a').clickToScroll();
     $('form#registration_form').registrationForm();
     $('#instagram_feed').instaGrammer();
     $('header h1').height($(window).height()); // set a fixed height pre-animation
-    $(window).coordinateScrolling();
+    $('body').coordinateScrolling();
   });
 })(jQuery);
 
