@@ -54,7 +54,7 @@ header {
   z-index: 999;
   height: 60px;
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #FFF;
 }
 header h1 {
   float: left;
