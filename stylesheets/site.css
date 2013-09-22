@@ -55,18 +55,24 @@ header {
   height: 120px;
   width: 100%;
   background-color: #FFF;
-  transition: height 0.3s;
+  transition: min-height 0.3s;
+  -moz-transition: min-height 0.3s;
+  -webkit-transition: min-height 0.3s;
+}
+.splash header {
+  min-height: 100%;
+  position: relative;
 }
 header .st-width {
-  height: 120px;
-  position: relative;
-  transition: height 0.3s;
+  min-height: 100%;
+  position: static;
+  /* transition: height 0.3s; */
 }
 header h1 {
   float: left;
   /* -webkit-transform: translateY(-600px); */
   width: 220px;
-  height: 100%;
+  min-height: 100%;
   bottom: 20px;
   position: absolute;
   /* transition: -webkit-transform 0.3s; */
@@ -77,7 +83,7 @@ header h1 svg {
 header nav {
   position: absolute;
   bottom: 20px;
-  right: 0;
+  margin-left: 620px;
 }
 
 header nav a {
@@ -87,16 +93,6 @@ header nav a {
   margin-left: 15px;
 }
 
-.splash header {
-  height: 100%;
-  position: relative;
-}
-.splash header .st-width {
-  height: 100%;
-}
-.splash header h1 {
-  /* -webkit-transform: translateY(-30px); */
-}
 section {
   background-color: #38383A;
   padding-top: 60px;
@@ -151,8 +147,9 @@ section#photos ul li img {
   width: 300px;
 }
 section#photos ul li a img {
-  transition: width 0.2s,
-              margin 0.2s;
+  transition: width 0.2s, margin 0.2s;
+  -moz-transition: width 0.2s, margin 0.2s;
+  -webkit-transition: width 0.2s, margin 0.2s;
 }
 section#photos ul li a:hover img {
   width: 306px;
