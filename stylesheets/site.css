@@ -62,6 +62,7 @@ header {
 .splash header {
   min-height: 100%;
   position: relative;
+  border-top: #F9A132 5px solid;
 }
 header .st-width {
   min-height: 100%;
