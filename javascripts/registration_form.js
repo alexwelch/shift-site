@@ -11,32 +11,33 @@
 
     base.bindEvents = function() {
       base.$el.on('submit', base.handleSubmit);
-      base.$el.on('blur', 'input, select', base.checkForErrors);
+      base.$el.on('change', 'input, select', base.checkForErrors);
     };
 
     base.handleSubmit = function(e) {
-      e.preventDefault();
       if (base.isValid()) {
-        base.$el.submit();
         base.displaySuccessMessage();
+      } else {
+        e.preventDefault();
       }
     };
 
     base.checkForErrors = function(e) {
       var $target = $(e.currentTarget);
+      base.validateInput($target);
+    };
+
+    base.validateInput = function($target) {
       switch ($target.attr('name')) {
         case 'name':
-          base.validateName($target);
-          break;
+          return base.validateName($target);
         case 'email':
-          base.validateEmail($target);
-          break;
+          return base.validateEmail($target);
         case 'count':
-          base.validateCount($target);
-          break;
           $target.removeClass('with-placeholder');
+          return base.validateCount($target);
         default:
-          console.log('no error input to check');
+          break;
       }
     };
 
@@ -49,26 +50,31 @@
     base.validateEmail = function($input) {
       if (base.checkEmailFormat($input.val())) {
         base.markFieldAsValid($input);
+        return true;
       } else {
         base.markFieldAsInvalid($input);
+        return false;
       }
     };
 
     base.validateCount = function($input) {
-      console.log('count');
       var val = $input.val();
       if (!!val && parseInt(val)) {
         base.markFieldAsValid($input);
+        return true;
       } else {
         base.markFieldAsInvalid($input);
+        return false;
       }
     };
 
     base.validateName = function($input) {
       if ($input.val().length > 0) {
         base.markFieldAsValid($input);
+        return true;
       } else {
         base.markFieldAsInvalid($input);
+        return false;
       }
     };
 
@@ -82,11 +88,20 @@
     }
 
     base.displaySuccessMessage = function() {
-      console.log('good job');
+      var name = base.$el.find('input[name="name"]').val();
+      base.$el.find('input[type="submit"]').prop('disabled', true).val('sent!');
+      base.$el.find('.thank-you-text').text('We think ' + name + ' is super cool for planning to attend the Shift art auction.');
     };
 
     base.isValid = function() {
-
+      var invalidCount = 0;
+      var $inputs = base.$el.find('input[type=text], select');
+      $inputs.each(function(i, el) {
+        if (!base.validateInput($(el))) {
+          invalidCount++;
+        }
+      });
+      return invalidCount == 0;
     };
 
     base.init();
