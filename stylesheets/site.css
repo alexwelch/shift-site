@@ -1,8 +1,7 @@
 /* --- COLORS ---
-#EC4B1B - orange
-#F9A132 - yellowish-orange
-#38383A - slate
-#F2F2F2 - light grey
+#E05017 - orange
+#FBB040 - yellowish-orange
+#484848 - slate
 */
 
 
@@ -15,12 +14,12 @@ body {
 body {
   font-family: 'Rokkitt', serif;
   font-size: 22px;
-  color: #EC4B1B;
+  color: #E05017;
 }
 
 a {
   text-decoration: none;
-  color: #F9A132;
+  color: #FBB040;
 }
 
 p {
@@ -57,11 +56,14 @@ header {
   transition: min-height 0.3s;
   -moz-transition: min-height 0.3s;
   -webkit-transition: min-height 0.3s;
+  box-shadow: 0px 1px 1px #bbb;
+  -moz-box-shadow: 0px 1px 1px #bbb;
+  -webkit-box-shadow: 0 1px 1px #bbb;
 }
 .splash header {
   min-height: 100%;
   position: relative;
-  border-top: #F9A132 5px solid;
+  border-top: #FBB040 5px solid;
 }
 header .st-width {
   min-height: 100%;
@@ -89,13 +91,13 @@ header nav {
 
 header nav a {
   font-size: 22px;
-  color: #EC4B1B;
+  color: #E05017;
   display: inline-block;
   margin-left: 15px;
 }
 
 section {
-  background-color: #38383A;
+  background-color: #484848;
   padding-top: 60px;
   position: relative;
   font-size: 32px;
@@ -108,7 +110,7 @@ footer { position: relative; z-index: 95 }
 
 section .st-width {
   padding-top: 150px;
-  background: url(../images/seperator_slate.png) no-repeat center top;
+  background: url(../images/arrow_rule_dark.png) no-repeat center top;
 }
 section#about .st-width {
   padding-top: 0;
@@ -118,7 +120,7 @@ section#about .st-width {
   text-transform: uppercase;
 }
 section#sponsors .st-width {
-  background-image: url(../images/seperator_light_grey.png);
+  background-image: url(../images/arrow_rule_light.png);
   overflow: auto;
   padding-bottom: 70px;
 }
@@ -160,7 +162,7 @@ section#photos ul li a:hover img {
 
 section#sponsors {
   color: #636262;
-  background-color: #ACAEB0;
+  background-color: #FFF;
 }
 #sponsors ul li {
   float: left;
@@ -207,7 +209,7 @@ section#location {
   right: 40px;
   background: #fff;
   padding:20px;
-  color: #38383A;
+  color: #484848;
   opacity: 0.9;
 }
 .map-wrap address span {
@@ -224,7 +226,7 @@ section#location {
 }
 
 footer {
-  background-color: #EC4B1B;
+  background-color: #E05017;
   padding: 35px 0;
 }
 footer a {
