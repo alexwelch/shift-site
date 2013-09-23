@@ -263,3 +263,14 @@ footer .social-links li a {
   text-indent: 100%;
 }
 
+footer .social-links li.email-link a { background-position: 0 0; }
+footer .social-links li.twitter-link a { background-position: -80px 0; }
+footer .social-links li.instagram-link a { background-position: -160px 0; }
+
+footer .social-links li.email-link a:hover { background-position: 0 -80px; }
+footer .social-links li.twitter-link a:hover { background-position: -80px -80px; }
+footer .social-links li.instagram-link a:hover { background-position: -160px -80px; }
+
+footer .social-links li.email-link a:active { background-position: 0 -160px; }
+footer .social-links li.twitter-link a:active { background-position: -80px -160px; }
+footer .social-links li.instagram-link a:active { background-position: -160px -160px; }
