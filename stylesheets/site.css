@@ -103,8 +103,8 @@ section {
   font-size: 32px;
 }
 
-section#about { z-index: 91; }
-section#photos { z-index: 92; }
+section#about { z-index: 92; }
+section#photos { z-index: 91; }
 section#register { z-index: 93; }
 footer { position: relative; z-index: 95 }
 
@@ -113,14 +113,14 @@ section .st-width {
   background: url(../images/arrow_rule_dark.png) no-repeat center top;
 }
 section#about .st-width {
-  padding-top: 0;
+  padding-top: 120px;
   background-image: none;
   width: 560px;
   text-align: justify;
   text-transform: uppercase;
+  position: relative;
 }
 section#sponsors .st-width {
-  background-image: url(../images/arrow_rule_light.png);
   overflow: auto;
   padding-bottom: 70px;
 }
@@ -132,6 +132,15 @@ section#about {
   margin-top: 0;
 }
 
+#about .heart {
+  position: absolute;
+  height: 670px;
+  width: 800px;
+  left: -500px;
+  bottom: -110px;
+  z-index: -1;
+  background: url(../images/big_heart.png) no-repeat 0 0;
+}
 section#photos {
   overflow: auto;
 }
