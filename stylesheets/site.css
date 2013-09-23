@@ -164,6 +164,12 @@ section#sponsors {
   color: #636262;
   background-color: #FFF;
 }
+#sponsors h3 {
+  margin-top: 2em;
+}
+#sponsors > div > p {
+  font-size: 40px;
+}
 #sponsors ul li {
   float: left;
   width: 140px;
