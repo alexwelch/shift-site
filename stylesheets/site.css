@@ -121,6 +121,7 @@ section#about .st-width {
   position: relative;
 }
 section#sponsors .st-width {
+  background-image: url(../images/arrow_rule_light.png);
   overflow: auto;
   padding-bottom: 70px;
 }
