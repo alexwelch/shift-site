@@ -48,22 +48,28 @@
           <span class='month'>Oct</span>
           <span class="day">26</span>
           <span class="year">2013</span>
+          <span class="time">5-10 pm</span>
         </div>
-        <a class="button" href="/todo">R.S.V.P</a>
-        <span class="time">5PM - 10PM</span>
-        <p>Join us for a night of beer, food, bikes and art.</p>
+        <h2 class="join">Join Us</h2> 
+        <p>for an evening of <br /> beer, food, bikes and art.</p>
+
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
         <form id="registration_form" method="get" target="hidden_iframe" action="https://script.google.com/macros/s/AKfycbzqg-FtqXd0sLbk6RhuIUqXtGmMCdmfe02wxag4hnYdBteVDZjH/exec">
-          <input name="name" type="text" placeholder="name"/>
-          <input name="email" type="text" placeholder="email"/>
-          <select name="count">
-            <option value="" selected disabled>Guests</option>
-            <option value="1">0</option>
-            <option value="2">+1</option>
-            <option value="3">+2</option>
-            <option value="4">+3</option>
-          </select>
-          <input type="submit" value="Register" />
+          <h2>R.S.V.P.</h2>
+          <div class="thank-you-text"></div>
+          <fieldset>
+            <input name="name" type="text" placeholder="name"/>
+            <input name="email" type="text" placeholder="email"/>
+            <select name="count" class="with-placeholder">
+              <option value="" selected disabled>Guests</option>
+              <option value="1">0</option>
+              <option value="2">+1</option>
+              <option value="3">+2</option>
+              <option value="4">+3</option>
+            </select>
+            <input type="submit" value="submit" />
+          </fieldset>
         </form>
       </div>
     </section>

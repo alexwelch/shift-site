@@ -34,6 +34,7 @@
         case 'count':
           base.validateCount($target);
           break;
+          $target.removeClass('with-placeholder');
         default:
           console.log('no error input to check');
       }
