@@ -168,13 +168,22 @@ section#sponsors {
   float: left;
   width: 140px;
   margin-right: 20px;
-  background-color: #FFF;
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 140px;
+  background-position: 10px 0;
+  background-repeat: no-repeat;
 }
 #sponsors ul li.last {
   margin-right: 0;
 }
+#sponsors ul li#primal { background-image: url(../images/sponsors/primal.png); }
+#sponsors ul li#bikedenver { background-image: url(../images/sponsors/bikedenv.png); }
+#sponsors ul li#refuel { background-image: url(../images/sponsors/refuel.png); }
+#sponsors ul li#artshoppe { background-image: url(../images/sponsors/art.png); }
+#sponsors ul li#muccy { background-image: url(../images/sponsors/muccy.png); }
+#sponsors ul li#beer { background-image: url(../images/sponsors/beer.png); }
+
 #sponsors ul li p,
 #sponsors ul li h4 {
   margin: 10px;
