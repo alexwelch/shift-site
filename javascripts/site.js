@@ -2,8 +2,9 @@
 
   $.fn.instaGrammer = function() {
     $(this).instagram({
-      clientId: '0004dbf5e3114fdda0dab4d51426bc3d',
-      count: 6
+      userId: 543154332,
+      count: 6,
+      accessToken: '543154332.297d5f8.53e1cd11502242e696c014e4b1a2e58d',
     });
 
     $('#instagram_feed').on('didLoadInstagram', function(e, response) {
@@ -43,7 +44,3 @@
     $('body').coordinateScrolling();
   });
 })(jQuery);
-
-// use this to get a access token when the site is up
-// https://api.instagram.com/oauth/authorize/?client_id=0004dbf5e3114fdda0dab4d51426bc3d&redirect_uri=http://localhost/primal_shift&response_type=code
-
