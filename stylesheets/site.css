@@ -96,9 +96,15 @@ header nav {
 
 header nav a {
   font-size: 22px;
-  color: #E05017;
+  color: #828282;
   display: inline-block;
   margin-left: 15px;
+}
+header nav a:hover {
+  color: #E05017;
+}
+header nav a:active {
+  color: #D34818;
 }
 
 section {
