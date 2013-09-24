@@ -52,6 +52,10 @@
     padding: 15px;
   }
 
+  #registration_form fieldset {
+    width: auto;
+  }
+
   #registration_form .thank-you-text {
     width: auto;
     float: none;
