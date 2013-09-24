@@ -1,0 +1,83 @@
+@media only screen and (max-width: 640px) {
+  .st-width {
+    width: 300px; 
+  }
+
+  section {
+    font-size: 26px;
+  }
+  section#photos ul li {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin-right: 0;
+    overflow: hidden;
+  }
+
+  header {
+    position: relative;
+    height: 120px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  section#about {
+    margin-top: 0;
+  }
+  #about .heart {
+    display: none;
+    background: none;
+  }
+  section#about .st-width {
+    width: 300px;
+    padding-top: 0;
+  }
+
+  #sponsors ul li,
+  #sponsors ul li.last {
+    background-position: top center;
+    text-align: center;
+    width: 220px;
+    margin: 0 auto;
+    float: none;
+  }
+
+  #sponsors > div > p {
+    font-size: 32px;
+  }
+
+  #registration_form {
+    padding: 15px;
+  }
+
+  #registration_form .thank-you-text {
+    width: auto;
+    float: none;
+  }
+
+  #registration_form input {
+    width: 270px;
+  }
+
+  section#location {
+    height: auto;
+    background: none;
+  }
+  .map-wrap {
+    height: auto;
+    overflow: inherit;
+    position: static;
+    bottom: inherit;
+    width: inherit;
+  }
+  .map-wrap address {
+    position: static;
+    background: #fff;
+    padding:20px;
+    color: #484848;
+    opacity: 1;
+    text-align: center;
+  }
+}

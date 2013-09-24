@@ -6,6 +6,7 @@
     base.lastScrollTop = 0;
     base.splashIsShowing = true;
     base.navigating = false;
+    base.mobileBreakpoint = 640;
 
     base.init = function(){
       base.options = $.extend({},$.ScrollingCoordinator.defaultOptions, options);
@@ -13,7 +14,9 @@
     };
 
     base.bindEvents = function() {
-      $(window).on('scroll', base.toggleSplashScreen);
+      if $(window).width() > base.mobileBreakpoint) {
+        $(window).on('scroll', base.toggleSplashScreen);
+      }
       base.$el.find('header a').on('click', base.handleNavClick);
     };
 
