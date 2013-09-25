@@ -14,7 +14,7 @@
     };
 
     base.bindEvents = function() {
-      if $(window).width() > base.mobileBreakpoint) {
+      if ($(window).width() > base.mobileBreakpoint) {
         $(window).on('scroll', base.toggleSplashScreen);
       }
       base.$el.find('header a').on('click', base.handleNavClick);
