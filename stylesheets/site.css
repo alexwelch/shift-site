@@ -202,9 +202,15 @@ section#sponsors {
   margin-right: 20px;
   font-size: 12px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding-top: 140px;
   background-position: 10px 0;
   background-repeat: no-repeat;
+}
+
+#sponsors ul li a {
+	display: block;
+	padding-top: 140px;
+	color: #828282;
+	
 }
 #sponsors ul li.last {
   margin-right: 0;
