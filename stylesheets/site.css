@@ -221,6 +221,12 @@ section#sponsors {
 #sponsors ul li#artshoppe { background-image: url(../images/sponsors/art.png); }
 #sponsors ul li#muccy { background-image: url(../images/sponsors/muccy.png); }
 #sponsors ul li#beer { background-image: url(../images/sponsors/LeftHand.png); }
+#sponsors ul li#boa {background-image: url(../images/sponsors/boa.png); }
+#sponsors ul li#framedeart {background-image: url(../images/sponsors/framedeart.png); }
+#sponsors ul li#pfb {background-image: url(../images/sponsors/pfb.png); }
+#sponsors ul li#taxi {background-image: url(../images/sponsors/taxi.png); }
+
+
 
 #sponsors ul li p,
 #sponsors ul li h4 {
