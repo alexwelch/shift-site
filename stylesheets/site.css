@@ -78,21 +78,44 @@ header {
 header .st-width {
   min-height: 100%;
   position: static;
-  /* transition: height 0.3s; */
 }
 header h1 {
   float: left;
-  /* -webkit-transform: translateY(-600px); */
   width: 220px;
   min-height: 100%;
   bottom: 20px;
   position: absolute;
-  /* transition: -webkit-transform 0.3s; */
 }
 header h1 svg {
   position: absolute;
   bottom: 0;
 }
+
+
+/* --- TRANSITION SHIZZLE --- */
+
+.splash header h1 svg #orangeArrowLarge,
+.splash header h1 svg #yellowArrowLarge {
+  -webkit-transition: -webkit-transform 0.8s ease-in;
+  -webkit-transform: translate3d(0, -2400px, 0);
+  -webkit-transition-delay: 0.4s;
+}
+.splash header h1 svg #yellowArrowLarge {
+  -webkit-transition-delay: 1s;
+}
+.splash header h1.svg-loaded svg #orangeArrowLarge,
+.splash header h1.svg-loaded svg #yellowArrowLarge {
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.splash header h1 svg g#shiftLogo {
+  -webkit-transition: -webkit-transform 0.8s ease-in;
+  -webkit-transform: translate3d(0, -2400px, 0);
+}
+.splash header h1.svg-loaded svg g#shiftLogo {
+  -webkit-transform: translate3d(0,0,0);
+}
+
 header nav {
   position: absolute;
   bottom: 20px;
